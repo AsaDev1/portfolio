@@ -10,10 +10,10 @@ const Home = () => {
     <section className="home">
       <div className="home-content">
         <h1>Welcome to My Portfolio</h1>
-        <h2 className="big-heading">Muhammad Dawood Imran.</h2>
+        <h2 className="big-heading">Muhammad Asad Hussain.</h2>
         <h3 className="big-heading typewriter">
           <Typewriter
-            words={['Software Engineer', 'Data Scientist', 'Data Analyst']}
+            words={['Software Engineer', 'Full Stack Web Developer', 'Mobile App Developer']}
             loop={0}
             cursor
             cursorStyle='|'
@@ -23,22 +23,22 @@ const Home = () => {
           />
         </h3>
         <p>
-          Transforming data into innovation through clean code and machine learning. Building solutions that make an impact in the real world.
+          Transforming ideas into reality through clean code and creativity. Building solutions that make an impact in the real world.
         </p>
         
       </div>
       <div className="connect-links-container">
         <div className="connect-links">
-          <a href="https://github.com/Dawood-Imran" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/AsaDev1" target="_blank" rel="noopener noreferrer">
             <FaGithub size={24} color='#333' />
           </a>
-          <a href="https://www.linkedin.com/in/muhammad-dawood-imran/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/asadev/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={24} color='#0077B5' />
           </a>
-          <a href="https://www.instagram.com/m.daud_09/?igsh=MTV3M210YnFidHE5aQ%3D%3D" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/dot_asad" target="_blank" rel="noopener noreferrer">
             <FaInstagram size={24} color="#E1306C"/>
           </a>
-          <a href="https://www.facebook.com/people/Daud-Imran/pfbid0SUM7RqrfmhdbZjqJc5Fcy1hoC3a6qS4w3stu6g5SMxYRiVKVnqE6cFMDJkYqq8Hgl/?rdid=bGjtQMV0EGG1VfKj&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AxtVHakur%2F" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/muhammad.asad.871603" target="_blank" rel="noopener noreferrer">
             <FaFacebook size={24} color="#1877F2" />
           </a>
         </div>

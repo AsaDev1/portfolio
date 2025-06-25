@@ -13,7 +13,7 @@ const Navbar = () => {
   const downloadResume = () => {
     const link = document.createElement('a');
     link.href = require('../resume.pdf'); // Adjust the path as needed
-    link.download = 'Dawood_Imran_Resume.pdf';
+    link.download = 'Asad_Hussain_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -23,7 +23,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <NavLink to="/" className="logo" activeClassName="active-logo">
-          MD
+          AsaDev
         </NavLink>
         <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <ol>
