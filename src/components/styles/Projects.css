@@ -34,44 +34,4 @@
   min-height: 60vh;
   text-align: center;
 }
-
-.projects-wrapper {
-  max-width: 800px;
-  width: 100%;
-}
-
-.projects-title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  font-weight: 700;
-}
-
-.projects-message {
-  padding: 2rem;
-  background-color: #1e1e1e;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
-  animation: pulse 2s infinite;
-}
-
-.projects-message .emoji {
-  font-size: 3rem;
-}
-
-.projects-message .main-text {
-  font-size: 1.6rem;
-  margin-top: 1rem;
-  font-weight: 600;
-}
-
-.projects-message .sub-text {
-  font-size: 1rem;
-  color: #bbb;
-  margin-top: 0.5rem;
-}
-
-@keyframes pulse {
-  0% { opacity: 0.7; }
-  50% { opacity: 1; }
-  100% { opacity: 0.7; }
-}
+ 
