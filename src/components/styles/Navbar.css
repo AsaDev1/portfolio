@@ -1,0 +1,156 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: transparent; /* ⬅️ Lower alpha for more transparency */
+  backdrop-filter: blur(10px);            /* ⬅️ Keeps that frosted glass effect */
+  z-index: 11;
+  padding: 0 20px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1600px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  color: var(--green);
+  font-family: 'Courier New', Courier, monospace; /* Changed font-family */
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.logo:hover {
+  transform: rotate(-5deg) scale(1.1); /* Tilt to the right and scale up when hovered */
+  color: var(--lightest-slate); /* Change color on hover */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.active-logo {
+  color: var(--lightest-slate);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-links ol {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-links ol li {
+  margin: 0 5px;
+  position: relative;
+  counter-increment: item 1;
+  font-size: 18px;
+}
+
+.nav-links ol li a {
+  padding: 10px;
+  text-decoration: none;
+  color: var(--lightest-slate);
+  transition: color 0.25s ease;
+}
+
+.nav-links ol li a:hover {
+  color: var(--green);
+}
+
+.active-link {
+  color: var (--green);
+  font-weight: bold;
+  border-bottom: 2px solid var(--green); /* Add underline to active link */
+}
+
+.nav-links ol li a span {
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.resume-button {
+  color: var(--green);
+  background-color: transparent;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.resume-button:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  color: var(--lightest-slate);
+}
+
+@media (max-width: 700px) {
+  .navbar-container {
+    padding: 0 25px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    background-color: rgba(10, 25, 47, 0.95);
+    width: 100%;
+    padding: 20px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links ol {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .resume-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-right: 10px;
+  }
+
+  .navbar-container {
+    justify-content: space-between;
+  }
+}
