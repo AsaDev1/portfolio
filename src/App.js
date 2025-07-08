@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
+import { HelmetProvider } from 'react-helmet-async';
 
 import Projects from './components/Projects';
 import Contact from './components/Contact';
@@ -25,6 +26,7 @@ const PageTransition = ({ children }) => {
 
 function App() {
   return (
+     <HelmetProvider>
     <Router>
       <div className="App">
         <Navbar />
@@ -41,7 +43,9 @@ function App() {
         </Suspense>
       </div>
     </Router>
+    </HelmetProvider>
   );
+  
 }
 
 export default App;

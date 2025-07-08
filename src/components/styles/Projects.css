@@ -1,37 +1,274 @@
-.coming-soon {
-  padding: 4rem 2rem;
+/* --- Root variables for consistency (assuming from your other files) --- */
+:root {
+  --navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #64ffda;
+}
+
+/* --- General Projects Section Styling --- */
+.projects-section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  
+  /* --- Corrected Background --- */
+  background-image: 
+    linear-gradient(to bottom left, rgba(17, 16, 16, 0.678), rgba(12, 10, 22, 0.863)),
+    url('../../assets/bg.png'); /* Assuming the path from Home.css is correct */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+.projects-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
-  background-color: #121212;
-  color: white;
 }
 
-.coming-soon-message {
-  font-size: 1.8rem;
-  margin-top: 2rem;
-  animation: pulse 2s infinite;
+.projects-heading {
+  font-size: clamp(26px, 5vw, 32px);
+  font-weight: 700;
+  color: var(--lightest-slate);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
 }
 
-.coming-soon-subtext {
-  display: block;
-  margin-top: 1rem;
+.projects-subheading {
+  font-size: 1.1rem;
+  color: var(--slate);
+  margin-bottom: 4rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Grid & Card Styling --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.project-card {
+  background-color: var(--light-navy);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Ensures image corners are rounded */
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+/* --- Image Placeholder --- */
+.project-image-container {
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  position: relative;
+  background-color: var(--lightest-navy);
+}
+
+.project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Card Content --- */
+.project-content {
+  padding: 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-header {
+  margin-bottom: 1rem;
+}
+
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--lightest-slate);
+  margin: 0;
+}
+
+.project-description {
   font-size: 1rem;
-  color: #ccc;
+  line-height: 1.5;
+  color: var(--light-slate);
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
 }
 
-@keyframes pulse {
-  0% { opacity: 0.7; }
-  50% { opacity: 1; }
-  100% { opacity: 0.7; }
+/* --- Technology List Styling --- */
+.project-tech-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
 }
 
-.projects-coming-soon {
-  padding: 4rem 2rem;
+/* --- UPDATED: Technology Tag Styling --- */
+.project-tech-list li {
+  background-color: var(--lightest-navy);
+  color: var(--green);
+  padding: 0.4em 0.8em;
+  border-radius: 15px; /* Rounded corners for a tag/pill shape */
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+
+/* --- Modal Styling --- */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #121212;
-  color: white;
-  min-height: 60vh;
-  text-align: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
 }
- 
+
+.modal-content {
+  background-color: var(--light-navy);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  transform: scale(0.95);
+  animation: slideIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  to { transform: scale(1); }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--lightest-navy);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-title {
+  color: var(--lightest-slate);
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.modal-close-button {
+  background: none;
+  border: none;
+  color: var(--slate);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-close-button:hover {
+  color: var(--green);
+}
+
+.modal-image {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.modal-description {
+  color: var(--light-slate);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--lightest-navy);
+}
+
+.modal-link-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--green);
+  background-color: transparent;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  padding: 0.6rem 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.modal-link-button:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .projects-heading {
+    font-size: 2rem;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-content {
+    padding: 1.5rem;
+  }
+  .modal-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* --- Prevent Body Scroll when Modal is Open --- */
+body.modal-open {
+  overflow: hidden;
+}

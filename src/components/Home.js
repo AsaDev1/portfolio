@@ -1,14 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter';
+import { Helmet } from 'react-helmet-async'; 
 
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
 import './styles/Home.css';
 
 const Home = () => {
   return (
+    
     <section className="home">
       <div className="home-content">
+         <Helmet>
+  <title>Asad | Portfolio"</title>
+  <meta name="description" content="Portfolio Site of Asad, a passionate Software Engineer." />
+
+  {/* Open Graph (OG) metadata for social media */}
+  <meta property="og:title" content="Asad's Portfolio - Home" />
+  <meta property="og:description" content="Portfolio Site of Asad, a passionate Software Engineer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://asadev.site/" />
+  <meta property="og:image" content="https://asadev.site/public/preview.jpg" /> </Helmet>
         <h1>Welcome to My Portfolio</h1>
         <h2 className="big-heading">Muhammad Asad Hussain.</h2>
         <h3 className="big-heading typewriter">
