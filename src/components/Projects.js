@@ -4,7 +4,7 @@ import { CgWebsite } from 'react-icons/cg';
 import './styles/Projects.css';
 
 
-import csfypImage from '../assets/projects/csfyp.png';
+import csfypImage from '../assets/projects/csfyp.jpg';
 import todoImage from '../assets/projects/todo-list.jpg'
 import xclone from '../assets/projects/x-clone.jpg'
 // --- Project Data ---
