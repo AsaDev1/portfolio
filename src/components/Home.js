@@ -12,7 +12,7 @@ const Home = () => {
     <section className="home">
       <div className="home-content">
          <Helmet>
-  <title>Asad | Portfolio"</title>
+  <title>Asad | Portfolio</title>
   <meta name="description" content="Portfolio Site of Asad, a passionate Software Engineer." />
 
   {/* Open Graph (OG) metadata for social media */}

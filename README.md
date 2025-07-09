@@ -30,16 +30,6 @@ asadev.site
 - `@` → `185.199.108.153` (and other GitHub IPs)
 - `www` → `CNAME` to `asadev.site`
 
-
-## Folder Structure
-
-.
-├── public/ # Static assets
-├── src/ # Source code (React components or HTML/CSS/JS)
-├── CNAME # Custom domain configuration
-├── index.html # Main HTML file
-├── README.md # This file
-
 ## Tech Stack
 
 - HTML5 / CSS3 / JavaScript

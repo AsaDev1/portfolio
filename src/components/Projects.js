@@ -3,43 +3,47 @@ import { FaGithub, FaTimes } from 'react-icons/fa';
 import { CgWebsite } from 'react-icons/cg';
 import './styles/Projects.css';
 
+
+import csfypImage from '../assets/projects/csfyp.png';
+import todoImage from '../assets/projects/todo-list.jpg'
+import xclone from '../assets/projects/x-clone.jpg'
 // --- Project Data ---
 const projectsData = [
   {
-    title: 'Chatify',
-    description: 'A real-time chat application for seamless communication and collaboration.',
-    longDescription: 'Chatify is a full-stack, real-time chat application built with the MERN stack and Socket.IO. It allows users to join chat rooms, send messages, and share images instantly. The application features a responsive design and a robust backend to handle concurrent connections.',
-    technologies: ['React', 'Node.js', 'Socket.IO', 'MongoDB', 'Express'],
+    title: 'Final Year Project Automation Tool',
+    description: 'Web Application to manage and handle the Final Year Project Submission, Review and Evaluation for Comsats University, Lahore Campus.',
+    longDescription: 'Automated FYP workflow for 300+ students using microservices and secure VPS deployment. Aimd at eliminating the manual management work.',
+    technologies: ['React', 'Node.js', 'PostreSQL', 'Docker', 'Github Actions'],
     githubUrl: 'https://github.com/AsaDev1/Chatify',
-    liveUrl: 'https://chatify-live-demo.com', // Replace with your actual live URL
-    imageUrl: 'https://placehold.co/600x400/0a192f/ffffff?text=Chatify',
+    liveUrl: 'https://csfyp.live', // Replace with your actual live URL
+    imageUrl:csfypImage ,
   },
   {
-    title: 'Bits-0f-C0de',
-    description: 'A personal blog platform for sharing tech insights and tutorials.',
-    longDescription: 'A performance-optimized personal blog built with Next.js for static site generation. It renders posts from Markdown files, supports syntax highlighting, and features a clean, minimalist design with a dark mode toggle for an excellent reading experience.',
-    technologies: ['Next.js', 'React', 'Tailwind CSS', 'Markdown'],
-    githubUrl: 'https://github.com/AsaDev1/Bits-0f-C0de',
-    liveUrl: 'https://bits-of-code-live.com', // Replace with your actual live URL
-    imageUrl: 'https://placehold.co/600x400/0a192f/ffffff?text=Bits-0f-C0de',
+    title: 'X-Clone',
+    description: 'A platform inpired by X(Twitter).',
+    longDescription: 'X platform Clone that includes Post, Comment and report functionality with user authentication.',
+    technologies: ['React', 'Node.js', 'MongoDB','Tailwind CSS', 'DaisyUI'],
+    githubUrl: 'https://github.com/AsaDev1/x-clone',
+   // liveUrl: 'https://bits-of-code-live.com', // Replace with your actual live URL
+    imageUrl: xclone,
   },
   {
-    title: 'Editor.io',
-    description: 'An online code editor for writing and previewing HTML, CSS, and JS.',
-    longDescription: 'A lightweight, in-browser code editor that allows developers to write and preview HTML, CSS, and JavaScript code instantly. It uses local storage to save work automatically, making it a handy tool for quick prototyping and testing.',
-    technologies: ['HTML5', 'CSS3', 'JavaScript'],
-    githubUrl: 'https://github.com/AsaDev1/Editor.io',
-    liveUrl: 'https://editor-io-live.com', // Replace with your actual live URL
-    imageUrl: 'https://placehold.co/600x400/0a192f/ffffff?text=Editor.io',
+    title: 'E-Commerce Site',
+    description: ' E-commerce platform inspired by a popular online shoping site.',
+    longDescription: 'E-Commerce platform with user authentication, product listings, cart, and checkout functionality.',
+    technologies: ['React', 'Node.js', 'MongoDB'],
+    //githubUrl: 'https://github.com/AsaDev1/Editor.io',
+   // liveUrl: 'https://editor-io-live.com', // Replace with your actual live URL
+    imageUrl: 'https://placehold.co/600x400/0a192f/ffffff?text=E-commerce site',
   },
   {
-    title: 'Plant AI',
-    description: 'A machine learning model to identify plant diseases from leaf images.',
-    longDescription: 'This project utilizes a deep learning model (CNN) built with TensorFlow to classify 38 different types of plant diseases from leaf images. The model was trained on a large dataset from Kaggle and achieved high accuracy, demonstrating a practical application of AI in agriculture.',
-    technologies: ['TensorFlow', 'Python', 'OpenCV', 'React'],
-    githubUrl: 'https://github.com/AsaDev1/Plant-AI',
+    title: 'Todo List',
+    description: 'An effective Goal Tacking Cross-Platform Mobile Application.',
+    longDescription: 'A cross-platform mobile app with CRUD operations to manage daily tasks.',
+    technologies: ['React Native', 'Expo'],
+    githubUrl: 'https://github.com/AsaDev1/todo-list',
     liveUrl: '',
-    imageUrl: 'https://placehold.co/600x400/0a192f/ffffff?text=Plant+AI',
+    imageUrl: todoImage,
   },
 ];
 

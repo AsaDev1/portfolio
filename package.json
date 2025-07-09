@@ -29,7 +29,7 @@
     "deploy": "gh-pages -d build"
   },
     "reactSnap": {
-    "inlineCss": true,
+    "inlineCss": false,
     "source": "build"
   },
 
