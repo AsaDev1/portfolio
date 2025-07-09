@@ -20,7 +20,7 @@ const Home = () => {
   <meta property="og:description" content="Portfolio Site of Asad, a passionate Software Engineer." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://asadev.site/" />
-  <meta property="og:image" content="https://asadev.site/public/preview.jpg" /> </Helmet>
+  <meta property="og:image" content="https://asadev.site/preview.jpg" /> </Helmet>
         <h1>Welcome to My Portfolio</h1>
         <h2 className="big-heading">Muhammad Asad Hussain.</h2>
         <h3 className="big-heading typewriter">
